@@ -1,0 +1,37 @@
+
+main {
+  padding: 30px 30px 10px;
+}
+
+.main--add-ingredient {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  height: 38px;
+
+}
+
+.main--add-ingredient > input {
+  border-radius: var(--border-radius);
+  border: 1px solid #D1D5DB;
+  padding: 9px 13px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 150px;
+  max-width: 400px;
+}
+
+.main--add-ingredient > button {
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: #141413;
+  color: #FAFAF8;
+  font-size: 0.875rem;
+  padding: 0 8px
+}
+
+.main--add-ingredient > button::before {
+  content: '+';
+  margin-right: .4rem;
+}
