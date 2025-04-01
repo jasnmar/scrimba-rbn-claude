@@ -5,7 +5,7 @@ import IngredentList from "../IngredientList/IngredientList"
 
 
 export default function Main() {
-  const [ingredients, setIngredients] = useState([])
+  const [ingredients, setIngredients] = useState(["all the main spices", "pasta", "ground beef", "tomato paste"])
   const [recipeShown, setRecipeShown] = useState(false)
 
   function getIngrediant(formData) {
@@ -31,16 +31,7 @@ export default function Main() {
         </form>
         {ingredients.length > 0 ? (
           <section>
-            <IngredentList ingredients={ingredients} />
-            {ingredients.length > 3 ? (
-              <div className="get-recipe-container">
-                <div>
-                  <h3>Ready for a recipe?</h3>
-                  <p>Generate a recipe from your list of ingredients.</p>
-                </div>
-                <button onClick={getRecipe}>Get a recipe</button>
-              </div>
-            ) : null}
+            <IngredentList getRecipeFunction={getRecipe} ingredients={ingredients} />
           </section>
         ) : null}
         {recipeShown ?
